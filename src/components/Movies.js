@@ -5,19 +5,16 @@ const Movies = () => {
   return (
     <div>
       <h1>Movies Page</h1>
-      {
-        movies.map((movie)=>
-        <div key={Math.random()}>
-          <h2>{movie.title}</h2>
+        {movies.map((movie)=>{
+        return <div>
+          <h2>Movie Title:{movie.title}</h2>
           <p>{movie.time}</p>
-       <ul>
-         {movie.genres.map(gen=><li>{gen}</li>)}
-       </ul>
+       <ul>{movie.genres.map(movie=>
+       {return <li>{movie}</li>})}</ul>
        </div>
-          )
-      }
-    </div>
-  );
+   })
 };
+</div>
+  )}
 
 export default Movies;
