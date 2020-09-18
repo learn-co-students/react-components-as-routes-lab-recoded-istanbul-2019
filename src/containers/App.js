@@ -1,3 +1,4 @@
+  
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -13,7 +14,14 @@ import Movies from '../components/Movies';
 const App = (props) => {
   return (
     <Router>
-      {/*{code here}*/}
+      <div>
+        <NavBar/>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/movies" component={Movies} />
+        <Route exact path="/directors" component={Directors} />
+        <Route exact path="/actors" component={Actors} />
+
+      </div>
     </Router>
   );
 };
